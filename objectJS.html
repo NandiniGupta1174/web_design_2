@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object in JS</title>
+</head>
+<body>
+    <script>
+        // object-collection or pair of keys(properties) and its value
+        //create and object - using literal way and new keyword
+
+        let student={
+        name: "John", 
+        age:23,
+        isMarried:false, 
+        address:{
+            streetNo:78,
+            area:"Sangam Vihar",
+            pincode:251001,
+            city:"Muzaffarnagar",
+        },
+        education:["10th","12th","B.Tech"],
+        degree:"B.Tech",
+        branch:"CSE",
+        year:2026,
+        getInfo:function(){
+            return "my current education is" +student.degree +student.branch;
+        }
+    };
+        console.log(student);
+        console.log(typeof(student));
+        //access objects keys using dot notation
+        console.log(student.address.streetNo);//object
+        console.log(student.education[2]);//array
+        console.log(student.getInfo());//function 
+    
+        //find keys in object
+        console.log('name' in student);
+        //delete keys from object
+        console.log(delete student.name);
+        console.log(student);
+        //find length of objects
+        let keysLength=Object.keys(student);
+        console.log(keysLength.length);
+        //iterate keys of objects
+
+        for(let i=0;i<keysLength.length;i++){
+            console.log(student.log(student[keysLength[i]]));
+        }
+        //iterate keys of object using for..in loop
+        for(let x in student){
+            console.log(student[x]);
+        }
+        //create object using new keyword
+        let myInfo=new Object();
+        myInfo.name="vinay";
+        myInfo.age=23;
+        myInfo.address="Muzaffarnagar";
+        myInfo.mob=7505847885;
+        myInfo.isMarried=false;
+        console.log(myInfo.name);//using dot notation
+        console.log(myInfo['address'])   //using [] notation
+
+    </script>
+</body>
+</html>
