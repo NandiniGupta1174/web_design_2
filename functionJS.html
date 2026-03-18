@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function in JS</title>
+</head>
+<body>
+    <script>
+        //function - block of code , used or defined to perform specific task
+        //Types of Function (behaviour of function is synchronous by default)
+        //normal function - with para,without para and with default
+
+        //normal function without parameters
+        function demo(){
+            console.log("hello JS");
+        }
+        demo(); //function calling
+
+        //with parameters
+
+        function demo1(text){
+            console.log("Hello " + text);
+        }
+        demo1("React");
+
+        //default parameters
+
+        function add(a,b=10){
+        console.log("Addition is " + (a+b));
+        }
+        add(123);
+        function cal(){
+    
+        function mul(x,y){
+            console.log(x-y);
+        }
+
+        function sub(p,r){
+            console.log(p-r);
+        }
+        mul(3,6);
+        sub(9,6);
+        add(3,6);
+    }
+    cal();
+
+
+    let msg=function(){
+        console.log("Hello ABES");
+        //console.log(typeof(msg));
+    }
+    msg();
+    //short code for above function i.e. arrow function
+    let msg1=()=>console.log("Hello ABESEC");
+    msg1();
+
+    //arrow function with multiple lines
+
+    let msg2=(a,b)=>{
+        var num1=a;
+        var num2=b;
+        var res=num1/num2;
+        console.log("Result is " + res);
+    }
+    msg2(10,20);
+
+    //IIFE
+
+    (function(){
+        console.log("Hello World!");
+    })();
+     //short code for above function
+    (msg=>console.log("hello"))();
+    </script>
+</body>
+</html>
